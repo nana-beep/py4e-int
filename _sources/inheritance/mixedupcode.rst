@@ -1,49 +1,52 @@
-Mixed-Up Code Exercises
-------------------------
-.. parsonsprob:: inheritance_mixedupcode_1
-    :numbered: left
-    :practice: T
-    :adaptive:
+Mixed-Up Code Questions
+-----------------------
 
-   Create a class ``Parent`` to have their eye_color be hazel. Next, write the class, Child, which is a subclass of Parent to 
-   inherit the eye_color of the Parent using the object lil_child.
-   ----
-   class Parent:
-   =====
-   class Parent #paired
-   =====
-     def eye_color(self):
-   =====
-        return "I have hazel eyes."
-   =====
-   class Child(Parent):
-   =====
-   class Child(): #paired
-   =====
-     def eye_color(self):
-   =====
-        super().eye_color()
-   =====
-   lil_child = Child()
+.. selectquestion:: Inheritance_MixedUpCode_1_sq
+   :fromid: inheritance_mixed1, inheritance_mixed1_ac
+   :toggle: 
 
-..activecode:: inheritance_mixedupcode_1-ac
 
-   Write a class ``Parent`` to have their eye_color be hazel. Next, write the class, Child, which is a subclass of Parent to 
-   inherit the eye_color of the Parent using the object lil_child.
-   
-   ----
-   class Parent:
-        # write code here
-  
-  
-   class Child:
-        # write code here
-      
-   ====
-   from unittest.gui import TestCaseGui
+.. selectquestion:: Inheritance_MixedUpCode_2_sq
+   :fromid: inheritance_mixed2, inheritance_mixed2_ac
+   :toggle: 
 
-   class myTests(TestCaseGui):
-       def testOne(self):
-           self.assertEqual(lil_child.eye_color(), "I have hazel eyes")
 
-   myTests().main()
+.. selectquestion:: Inheritance_MixedUpCode_3_sq
+   :fromid: inheritance_mixed3, inheritance_mixed3_ac
+   :toggle: 
+
+
+.. selectquestion:: Inheritance_MixedUpCode_4_sq
+   :fromid: inheritance_mixed4, inheritance_mixed4_ac
+   :toggle: 
+
+
+.. selectquestion:: Inheritance_MixedUpCode_5_sq
+   :fromid: inheritance_mixed5, inheritance_mixed5_ac
+   :toggle: 
+
+
+.. selectquestion:: Inheritance_MixedUpCode_6_sq
+   :fromid: inheritance_mixed6, inheritance_mixed6_ac
+   :toggle: 
+
+
+.. selectquestion:: Inheritance_MixedUpCode_7_sq
+   :fromid: inheritance_mixed7, inheritance_mixed7_ac
+   :toggle: 
+
+
+.. selectquestion:: Inheritance_MixedUpCode_8_sq
+   :fromid: inheritance_mixed8, inheritance_mixed8_ac
+   :toggle: 
+
+
+.. selectquestion:: Inheritance_MixedUpCode_9_sq
+   :fromid: inheritance_mixed9, inheritance_mixed9_ac
+   :toggle: 
+
+
+.. selectquestion:: Inheritance_MixedUpCode_10_sq
+   :fromid: inheritance_mixed10, inheritance_mixed10_ac
+   :toggle: 
+>>>>>>> upstream/master
