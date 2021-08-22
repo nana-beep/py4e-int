@@ -5,10 +5,8 @@ Mixed-Up Code Exercises
     :practice: T
     :adaptive:
 
-   The following program should have a subclass of the ``Parent`` class named ``Child``, and put a pass statement in the subclass. 
-   Then, create a ``Child`` object named ``lil_child``, and call the ``Parent`` method on the ``Child`` object to see what color 
-   eyes the ``lil_child`` has. The blocks have been mixed up and include a few extra blocks that aren't needed in the solution. Drag 
-   the needed blocks from the left and put them in the correct order on the right, indenting them correctly.
+   Create a class ``Parent`` to have their eye_color be hazel. Next, write the class, Child, which is a subclass of Parent to 
+   inherit the eye_color of the Parent using the object lil_child.
    ----
    class Parent:
    =====
@@ -30,9 +28,9 @@ Mixed-Up Code Exercises
 
 ..activecode:: inheritance_mixedupcode_1-ac
 
-   Write the following program should have a subclass of the ``Parent`` class named ``Child``, and put a pass statement in the subclass. 
-   Then, create a ``Child`` object named ``lil_child``, and call the ``Parent`` method on the ``Child`` object to see what color 
-   eyes the ``lil_child`` has.
+   Write a class ``Parent`` to have their eye_color be hazel. Next, write the class, Child, which is a subclass of Parent to 
+   inherit the eye_color of the Parent using the object lil_child.
+   
    ----
    class Parent:
         # write code here

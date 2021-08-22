@@ -45,7 +45,7 @@ Mixed-up code Questions
    :practice: T
    :adaptive:
 
-   Create the function, ``numbers(accum)``, so that ``accum``, with ``accum`` being any integer less than 6, increases its
+   Create the function, ``numbers(accum)``, so that ``accum`` which is any integer less than 6, increases its
    value by 2. Then, return ``accum``. For example, if ``accum`` is 0, the function should increase its value by 2 and return 6. 
    -----
    def numbers(accum):
@@ -62,7 +62,7 @@ Mixed-up code Questions
 
 .. activecode::  ch5ex2muc-ac
 
-    Write the function, ``numbers(accum)``, so that ``accum``, with ``accum`` being any integer less than 6, increases its
+    Write the function, ``numbers(accum)``, so that ``accum``, which is any integer less than 6, increases its
     value by 2. Then, return ``accum``. For example, if ``accum`` is 0, the function should increase its value by 2 and return 6. 
     ~~~~
     def numbers(accum):
