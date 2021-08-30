@@ -6,23 +6,28 @@ Mixed-up code Questions
    :practice: T
    :adaptive:
 
-   Create the function, ``incrementing(n)``, so that as long as the integer ``n`` is less than 5, increment ``n`` by 1. 
-   Then return the integer ``n``. For example, if ``n`` is 0, then the function should increment by 1 then return 5.
+   Create the function, ``incrementing(n)``, so that as long as the integer ``n`` is less than 5, increment ``n`` by 1
+   and add it to the list ``new_list``. Then return the list ``new_list``. For example, if ``n`` is 0, then the 
+   function should increment by 1 then return ``[0, 1, 2, 3, 4]``.
    -----
    def incrementing(n):
+   =====
+       new_list = []
    =====
        while n < 5:
    =====
        while n > 5: #paired
    =====
+           new_list.append(n)
            n = n + 1
    =====
-       return n
+       return new_list
 
 .. activecode::  ch5ex1muc-ac
 
-    Write the function, ``incrementing(n)``, so that as long as the integer ``n`` is less than 5, increment ``n`` by 1. 
-    Then return the integer ``n``. For example, if ``n`` is 0, then the function should increment by 1 then return 5.
+    Write the function, ``incrementing(n)``, so that as long as the integer ``n`` is less than 5, increment ``n`` by 1
+    and add it to the list ``new_list``. Then return the list ``new_list``. For example, if ``n`` is 0, then the 
+    function should increment by 1 then return ``[0, 1, 2, 3, 4]``.
     ~~~~
     def incrementing(n):
         # write code here
@@ -33,9 +38,10 @@ Mixed-up code Questions
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(incrementing(2), 5, 'incrementing(2)')
-            self.assertEqual(incrementing(6), 6, 'incrementing(6)')
-            self.assertEqual(incrementing(4), 5, 'incrementing(4)')
+            self.assertEqual(incrementing(2), [2, 3, 4], 'incrementing(2)')
+            self.assertEqual(incrementing(6), [], 'incrementing(6)')
+            self.assertEqual(incrementing(4), [4], 'incrementing(4)')
+            self.assertEqual(incrementing(0), [0, 1, 2, 3, 4], 'incrementing(0)')
 
     myTests().main()
 
@@ -45,25 +51,30 @@ Mixed-up code Questions
    :practice: T
    :adaptive:
 
-   Create the function, ``numbers(accum)``, so that ``accum`` which is any integer less than 6, increases its
-   value by 2. Then, return ``accum``. For example, if ``accum`` is 0, the function should increase its value by 2 and return 6. 
+   Create the function, ``numbers(accum)``, so that ``accum``, which is any integer less than 6, increases its
+   value by 2. Then, add each ``accum`` to the list, ``new_list`` and return ``new_list``. For example, if ``accum`` 
+   is 0, the function should increase its value by 2 and return ``[0, 2, 4]``. 
    -----
    def numbers(accum):
+   =====
+       new_list = []
    =====
        while accum < 6: 
    =====
        while accum < 7: #paired
    =====
+           new_list.append(accum)
            accum = accum + 2
    =====
-       return accum
+       return new_list
    
 
 
 .. activecode::  ch5ex2muc-ac
 
     Write the function, ``numbers(accum)``, so that ``accum``, which is any integer less than 6, increases its
-    value by 2. Then, return ``accum``. For example, if ``accum`` is 0, the function should increase its value by 2 and return 6. 
+    value by 2. Then, add each ``accum`` to the list, ``new_list`` and return ``new_list``. For example, if ``accum`` 
+    is 0, the function should increase its value by 2 and return ``[0, 2, 4]``. 
     ~~~~
     def numbers(accum):
         # write code here
@@ -74,10 +85,10 @@ Mixed-up code Questions
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(numbers(4), 6, 'numbers(4)')
-            self.assertEqual(numbers(6), 6, 'numbers(6)')
-            self.assertEqual(numbers(7), 7, 'numbers(7)')
-            self.assertEqual(numbers(0), 6, 'numbers(0)')
+            self.assertEqual(numbers(4), [4], 'numbers(4)')
+            self.assertEqual(numbers(6), [], 'numbers(6)')
+            self.assertEqual(numbers(7), [], 'numbers(7)')
+            self.assertEqual(numbers(0), [0, 2, 4], 'numbers(0)')
 
     myTests().main()
 
@@ -89,28 +100,32 @@ Mixed-up code Questions
 
    Create the following function, ``skipCount(start, increment, stop)``, to be arranged so that ``start`` is increaesed by ``increment`` until it hits
    ``stop`` with ``start`` being the starting integer, ``increment`` being the number the integers are incrementing by, and ``stop`` being the ending integer. 
-   Then return an integer for the last number. For example, if ``start`` is 0, ``increment`` is 2, and ``stop`` is 8, the function should increase by 2 and 
-   then return 8.
+   Then return a list ``new_list`` for the numbers. For example, if ``start`` is 0, ``increment`` is 2, and ``stop`` is 8, the function should increase by 2 and 
+   then return ``"[0, 2, 4, 6]"``.
    -----
    def skipCount(start, increment, stop):
+   =====
+       new_list = []
    =====
        counter = start
    =====
        while counter < stop:
    =====
+           new_list.append(counter)
            counter += increment
    =====
-       return counter
+       return new_list
 
 
 .. activecode::  ch5ex3muc-ac
 
     Write the following function, ``skipCount(start, increment, stop)``, to be arranged so that ``start`` is increaesed by ``increment`` until it hits
     ``stop`` with ``start`` being the starting integer, ``increment`` being the number the integers are incrementing by, and ``stop`` being the ending integer. 
-    Then return an integer for the last number. For example, if ``start`` is 0, ``increment`` is 2, and ``stop`` is 8, the function should increase by 2 and 
-    then return 8.
+    Then return a list ``new_list`` for the numbers. For example, if ``start`` is 0, ``increment`` is 2, and ``stop`` is 8, the function should increase by 2 and 
+    then return ``"[0, 2, 4, 6]"``.
     ~~~~
     def skipCount(start, increment, stop):
+        new_list = []
         counter = start
 
         # write code here
@@ -121,9 +136,9 @@ Mixed-up code Questions
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(skipCount(0,2,8), 8, 'skipCount(0,2,8)')
-            self.assertEqual(skipCount(0,2,9), 8, 'skipCount(0,2,9)')
-            self.assertEqual(skipCount(0,2,7), 6, 'skipCount(0,2,7)')
+            self.assertEqual(skipCount(0,2,8), [0, 2, 4, 6], 'skipCount(0,2,8)')
+            self.assertEqual(skipCount(0,2,9), [0, 2, 4, 6, 8], 'skipCount(0,2,9)')
+            self.assertEqual(skipCount(0,2,7), [0, 2, 4, 6], 'skipCount(0,2,7)')
 
     myTests().main()
 
@@ -134,8 +149,8 @@ Mixed-up code Questions
    :adaptive:
 
    Create the following function, ``loopMe(first, second)``, to infinitely loop using the variables ``first`` and ``second`` with one being greater 
-   than the other and then return a boolean, 'True'. For example, if ``first`` is 4 and ``second`` is 3, then the function should infintely loop 
-   and return 'True'.
+   than the other and then return a boolean, ``True``. For example, if ``first`` is 4 and ``second`` is 3, then the function should infintely loop 
+   and return ``True``.
    -----
    def loopMe(first, second):
    =====
@@ -153,8 +168,8 @@ Mixed-up code Questions
 .. activecode::  ch5ex4muc-ac
 
     Write the following function, ``loopMe(first, second)``, to infinitely loop using the variables ``first`` and ``second`` with one being greater 
-    than the other and then return a boolean, 'True'. For example, if ``first`` is 4 and ``second`` is 3, then the function should infintely loop 
-    and return 'True'.
+    than the other and then return a boolean, ``True``. For example, if ``first`` is 4 and ``second`` is 3, then the function should infintely loop 
+    and return ``True``.
     ~~~~
     def loopMe(first,second):
         # write code here
@@ -165,7 +180,7 @@ Mixed-up code Questions
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(loopMe(4,3), 'True', 'loopMe(4,3)')
+            self.assertEqual(loopMe(4,3), True, 'loopMe(4,3)')
 
     myTests().main()
 
@@ -305,7 +320,7 @@ Mixed-up code Questions
    :adaptive:
 
    Create the following function, ``multiple_three(num)``, to find the sum of every multiple of 3 between 3 and and a number of your choosing using ``num`` and 
-   return an integer for the sum. For example, if ``num`` is 37, the function should return ``234``.
+   return an integer for the sum. For example, if ``num`` is 37, the function should return 234.
    -----
    def multiple_three(num):
    =====
@@ -323,7 +338,7 @@ Mixed-up code Questions
 .. activecode::  ch5ex8muc-ac
 
     Write the following function, ``multiple_three(num)``, to find the sum of every multiple of 3 between 3 and and a number of your choosing using ``num`` and 
-    return an integer for the sum. For example, if ``num`` is 37, the function should return ``234``.
+    return an integer for the sum. For example, if ``num`` is 37, the function should return 234.
     ~~~~
     def multiple_three(num):
         sum = 0
@@ -389,25 +404,29 @@ Mixed-up code Questions
    :adaptive:
 
    Create the following function, ``countdown(counter)``, to start with a number of your choosing using the variable
-   ``counter``, decrement it, and then return the last number. For example, if ``counter`` is 5, then the function 
-   should countdown from 5 and return 0.
+   ``counter``, decrement it, and then return the list ``new_list`` for each ``counter``. For example, if ``counter`` 
+   is 5, then the function should countdown from 5 and return ``[5, 4, 3, 2, 1]``.
    -----
    def countdown(counter):
    =====
+       new_list = []
+   =====
        while counter > 0:
+   =====
+           new_list.append(counter)
    =====
            counter = counter - 1
    =====
            counter = counter + 1 #paired
    =====
-       return counter
+       return new_list
 
 
 .. activecode::  ch5ex10muc-ac
 
     Write the following function, ``countdown(counter)``, to start with a number of your choosing using the variable
-    ``counter``, decrement it, and then return the last number. For example, if ``counter`` is 5, then the function 
-    should countdown from 5 and return 0.
+    ``counter``, decrement it, and then return the list ``new_list`` for each ``counter``. For example, if ``counter`` 
+    is 5, then the function should countdown from 5 and return ``[5, 4, 3, 2, 1]``.
     ~~~~
     def countdown(counter):
         # write code here
@@ -417,8 +436,9 @@ Mixed-up code Questions
 
     class myTests(TestCaseGui):
         def testOne(self):
-            self.assertEqual(countdown(5), 0, 'countdown(5)')
-            self.assertEqual(countdown(3), 0, 'countdown(3)')
-            self.assertEqual(countdown(7), 0, 'countdown(7)')
+            self.assertEqual(countdown(5), [5, 4, 3, 2, 1], 'countdown(5)')
+            self.assertEqual(countdown(3), [3, 2, 1], 'countdown(3)')
+            self.assertEqual(countdown(7), [7, 6, 5, 4, 3, 2, 1], 'countdown(7)')
+            self.assertEqual(countdown(-1), [], 'countdown(-1)')
 
     myTests().main()
